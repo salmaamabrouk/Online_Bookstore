@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/2100f00b30.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>BookWorm!</title>
+</head>
+
+<body>
+
+
+  <div class="navbar">
+
+    <div class="image">
+      <a href="index.html"><img class="logo" src='./images/logo.png' /></a>
+
+    </div>
+    <a href="register.html"><i class="fa fa-fw fa-user"></i> Register</a>
+    <a href="login.html"><i class="fa-solid fa-circle-user"></i> Login</a>
+    <a href="users.html"><i class="fa-solid fa-users"></i> Users</a>
+    <a href="contactus.html"><i class="fa fa-fw fa-envelope"></i> Contact Us</a>
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+
+  </div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 5</div>
+      <img src="./images/img1.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 5</div>
+      <img src="./images/img2.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 5</div>
+      <img src="./images/img3.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 5</div>
+      <img src="./images/img4.jpeg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">5 / 5</div>
+      <img src="./images/img5.jpeg" style="width:100%">
+
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+      <span class="dot"></span>
+    </div>
+  </div>
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+
+
+  <div class="featuredproducts">
+    <h1>Featured Products</h1>
+    <div class="firstbook">
+      <a href="book1.html"><img src="./images/book1.jpeg" alt="book1"></a>
+      <a href="book1.html">
+        <h1>Where the Crawdads Sing</h1>
+      </a>
+      <p class="price">$19.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="secondbook">
+      <a href="book2.html"><img src="./images/book2.jpeg" alt="book2"></a>
+      <a href="book2.html">
+        <h1>Loathe to Love You</h1>
+      </a>
+      <p class="price">$20.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="thirdbook">
+      <a href="book3.html"><img src="./images/book3.jpeg" alt="book3"></a>
+      <a href="book3.html">
+        <h1>Crying in H Mart</h1>
+      </a>
+      <p class="price">$21.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="fourthbook">
+      <a href="book4.html"><img src="./images/book4.jpeg" alt="book1"></a>
+      <a href="book4.html">
+        <h1>Transcedent Kigdom</h1>
+      </a>
+      <p class="price">$15.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="fifthbook">
+      <a href="book5.html"><img src="./images/book5.jpeg" alt="book2"></a>
+      <a href="book5.html">
+        <h1>Woman Of Light</h1>
+      </a>
+      <p class="price">$26.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+    <div class="sixthbook">
+      <a href="book6.html"><img src="./images/book7.jpeg" alt="book3"></a>
+      <a href="book6.html">
+        <h1>The Maid</h1>
+      </a>
+      <p class="price">$18.99</p>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <p><button>Add to Cart</button></p>
+    </div>
+  </div>
+  <br>
+  <div class="footer">
+    <footer>
+
+      <h6>© 2023 BookWorm</h6>
+    </footer>
+  </div>
+</body>
+</html>
